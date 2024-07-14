@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Recipe Finder</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="src/output.css" />
+	</head>
+	<body class="bg-gray-100 p-6">
+		<div class="max-w-xl mx-auto min-w-full">
+			<div class="flex mb-4">
+				<input
+					type="text"
+					class="search-bar flex-1 p-4 border border-gray-300 rounded"
+					placeholder="Search for a recipe..." />
+				<button
+					class="search-btn ml-2 py-2 px-14 bg-blue-500 hover:bg-blue-200 text-white hover:text-slate-700 rounded">
+					Search
+				</button>
+			</div>
+			<div
+				class="recipe-container w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+		</div>
+		<dialog
+			id="recipeModal"
+			class="w-full max-w-md max-h-full overflow-y-auto rounded-lg shadow-lg">
+			<div class="bg-white p-6 rounded-lg relative">
+				<span
+					class="close absolute top-2 right-2 text-gray-600 cursor-pointer text-4xl"
+					>&times;</span
+				>
+				<div id="modal-body"></div>
+			</div>
+		</dialog>
+		<script src="script.js"></script>
+	</body>
+</html>
